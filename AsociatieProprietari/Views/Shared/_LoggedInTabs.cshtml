@@ -1,0 +1,11 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Context.User.IsInRole("Admin"))
+{
+    <li>@Html.ActionLink("Employees Manager", "Index", "Employee")</li>
+    <li>@Html.ActionLink("Contracts Manager", "Index", "Contract")</li>
+}
+
+@if (Context.User.IsInRole("User"))
+{
+    <li>@Html.ActionLink("Flats Manager", "Index", "Flat")</li>
+}

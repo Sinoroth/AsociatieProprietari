@@ -1,0 +1,99 @@
+﻿@model IEnumerable<AsociatieProprietari.Models.FlatModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-9">
+        <h2>Flats</h2>
+        <p>
+            @Html.ActionLink("Add New Flat", "Create")
+        </p>
+    </div>
+    <div class="col-md-3">
+        <br />
+        <br />
+        <button type="submit" class="btn ">@Html.ActionLink("Add New Month Invoices", "NewMonthInvoices")</button>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApartmentNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfPersons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfRooms)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApartmentNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfPersons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfRooms)
+            </td>
+            <td>
+                <table class="table">
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", new { id = item.Id })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Situation", "Situation", new { id = item.Id })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Add Invoice", "AddInvoice", new { id = item.Id })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Add Payment", "AddPayment", new { id = item.Id })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Water", "WaterConsumption", new { id = item.Id })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Report", "GenerateSummaryRepor", new { id = item.Id })
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    }
+
+</table>

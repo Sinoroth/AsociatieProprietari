@@ -1,0 +1,65 @@
+﻿@model AsociatieProprietari.Models.FlatModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Flat Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApartmentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApartmentNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfPersons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfPersons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfRooms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfRooms)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

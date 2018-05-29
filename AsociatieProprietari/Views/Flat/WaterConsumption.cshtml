@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AsociatieProprietari.Models.WaterConsumptionModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Water Consumption</h2>
+
+<p>
+    @Html.ActionLink("Add Water Consumption", "AddWaterConsumption", new { id = Url.RequestContext.RouteData.Values["id"] })
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Hot Water m^3
+        </th>
+        <th>
+            Cold Water m^3
+        </th>
+        <th>
+            Specific Month
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HotCubeMeters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColdCubeMeters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Month)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
