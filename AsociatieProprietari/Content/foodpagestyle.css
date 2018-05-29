@@ -1,0 +1,60 @@
+﻿.header_nav1 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-image: url("../Images/food4.jpg");
+	background-position: right top;
+	position: fixed; /* Set the navbar to fixed position */
+}
+
+.header_nav1 li {
+	float: left;
+}
+
+.header_nav1 li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+	.header_nav1 li a:hover {
+		color: #b1ab06;
+		editor /#a90329+0,8f0222+46,6d0019+54 */ background: #a90329; /* Old browsers */
+		background: -moz-linear-gradient(top, #a90329 0%, #8f0222 46%, #6d0019 54%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 46%,#6d0019 54%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #a90329 0%,#8f0222 46%,#6d0019 54%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+	}
+
+/* The navigation bar */
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+}
+
+	/* Links inside the navbar */
+	.navbar a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+		/* Change background on mouse-over */
+		.navbar a:hover {
+			background: #ddd;
+			color: black;
+		}
+
+/* Main content */
+.main {
+	margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
