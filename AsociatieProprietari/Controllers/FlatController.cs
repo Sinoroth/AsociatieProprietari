@@ -320,7 +320,7 @@ namespace AsociatieProprietari.Controllers
 
             if (System.IO.File.Exists(filePath))
             {
-             //   System.IO.File.Delete(filePath);
+               System.IO.File.Delete(filePath);
             }
 
             string fullScriptPath = Server.MapPath("~/ReportsPrograms/") + "\\summary.py";
